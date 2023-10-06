@@ -18,7 +18,7 @@ class AuthService with ChangeNotifier {
       autenticando = true;
 
       final HttpLink httpLink = HttpLink(
-        "http://127.0.0.1:8000/graphql/",
+        "https://ozielito-ruben8224.cloud.okteto.net/graphql/",
       );
 
       final GraphQLClient client = GraphQLClient(
@@ -43,7 +43,6 @@ class AuthService with ChangeNotifier {
       final QueryResult result = await client.mutate(options);
 
       if (result.hasException) {
-        // Manejar errores aquí
         print(result.exception.toString());
         return null;
       }
@@ -62,7 +61,7 @@ class AuthService with ChangeNotifier {
 class SignUpService with ChangeNotifier {
   Future<List<Map<String, dynamic>>> getUsers() async {
     final HttpLink httpLink = HttpLink(
-      "http://127.0.0.1:8000/graphql/",
+      "https://ozielito-ruben8224.cloud.okteto.net/graphql/",
     );
 
     final GraphQLClient client = GraphQLClient(
@@ -84,7 +83,7 @@ class SignUpService with ChangeNotifier {
     final QueryResult result = await client.query(options);
 
     if (result.hasException) {
-      throw Exception('Failed to load users');
+      throw Exception('Error al obtener usuarios');
     }
 
     List<Map<String, dynamic>> users =
@@ -96,7 +95,7 @@ class SignUpService with ChangeNotifier {
   Future<Map<String, Object>> createUser(
       String name, String password, String email) async {
     final HttpLink httpLink = HttpLink(
-      "http://127.0.0.1:8000/graphql/",
+      "https://ozielito-ruben8224.cloud.okteto.net/graphql/",
     );
 
     final GraphQLClient client = GraphQLClient(
@@ -125,14 +124,14 @@ class SignUpService with ChangeNotifier {
     final QueryResult result = await client.mutate(options);
 
     if (result.hasException) {
-      return {"success": false, "message": 'Failed to create user'};
+      return {"success": false, "message": 'Error al crear usuario'};
     }
 
     bool userCreated = result.data?['createUser']['user'] != null;
     if (userCreated) {
-      return {"success": true, "message": 'User created successfully'};
+      return {"success": true, "message": 'Usuario creado exitosamente'};
     } else {
-      return {"success": false, "message": 'Failed to create user'};
+      return {"success": false, "message": 'Error al crear usuario'};
     }
   }
 
@@ -142,7 +141,7 @@ class SignUpService with ChangeNotifier {
     );
 
     final HttpLink httpLink = HttpLink(
-      "http://127.0.0.1:8000/graphql/",
+      "https://ozielito-ruben8224.cloud.okteto.net/graphql/",
     );
 
     final Link link = authLink.concat(httpLink);
@@ -166,7 +165,7 @@ class SignUpService with ChangeNotifier {
     final QueryResult result = await client.query(options);
 
     if (result.hasException) {
-      throw Exception('Failed to load current user');
+      throw Exception('Error al obtener usuario');
     }
 
     return result.data?['me'];

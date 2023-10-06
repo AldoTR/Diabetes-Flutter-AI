@@ -24,7 +24,7 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black, // Cambia el color de fondo aquí
+      backgroundColor: Color.fromARGB(255, 23, 11, 111), 
       resizeToAvoidBottomInset: false,
       body: Center(
         child: Padding(
@@ -47,7 +47,7 @@ class _SignInPageState extends State<SignInPage> {
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, // Color del texto
+                    color: Color.fromARGB(255, 230, 230, 230), 
                   ),
                 ),
               ),
@@ -64,7 +64,7 @@ class _SignInPageState extends State<SignInPage> {
                   ).createShader(bounds);
                 },
                 child: Text(
-                  "¡Bienvenido de nuevo! ¿Qué te trae por aquí?",
+                  "Bienvenido a la aplicación de Flutter",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 14,
@@ -162,7 +162,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orange, // Cambia el color del botón
+                  primary: Color.fromARGB(255, 231, 72, 47), // Cambia el color del botón
                   padding: EdgeInsets.symmetric(horizontal: 125, vertical: 10),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(0),
@@ -173,7 +173,7 @@ class _SignInPageState extends State<SignInPage> {
                 height: 20,
               ),
               Text(
-                "¿No tienes una cuenta?",
+                "¿No tienes cuenta?",
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.white, // Color del texto
@@ -188,7 +188,7 @@ class _SignInPageState extends State<SignInPage> {
                   "Registrarse",
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.orange, // Cambia el color del texto
+                    color: Color.fromARGB(255, 231, 70, 61), // Cambia el color del texto
                   ),
                 ),
               ),
@@ -215,7 +215,7 @@ class _SignInPageState extends State<SignInPage> {
         // La autenticación falló, muestra un mensaje de error
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text("Inicio de sesión fallido"),
+            content: Text("Error al iniciar sesión"),
             // Configura el estilo de tu SnackBar
           ),
         );

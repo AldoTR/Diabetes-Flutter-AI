@@ -38,7 +38,7 @@ class LandingPage extends StatelessWidget {
                     ).createShader(bounds);
                   },
                   child: Text(
-                    "Bienvenido a nuestra Aplicación",
+                    "Bienvenido a la aplicación de Flutter",
                     style: TextStyle(
                       fontSize: 18 * textScaleFactor,
                       color: Colors
@@ -58,7 +58,7 @@ class LandingPage extends StatelessWidget {
                         Color.fromARGB(255, 117, 116, 116), // Color del botón
                   ),
                   child: Text(
-                    'Crear una cuenta',
+                    'Crear una nueva cuenta',
                     style: TextStyle(
                       fontSize: 18 * textScaleFactor,
                     ),
@@ -91,7 +91,7 @@ GestureDetector(
       ).createShader(bounds);
     },
     child: Text(
-      '¿Ya tienes una cuenta? Iniciar sesión',
+      'Inicia sesión aquí si ya tienes cuenta',
       style: TextStyle(
         color: Colors.white, // Color del texto
         fontSize: 16 * textScaleFactor,

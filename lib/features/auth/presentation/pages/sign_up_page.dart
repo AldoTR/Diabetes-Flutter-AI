@@ -58,7 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     children: [
                       SizedBox(width: 10),
                       Text(
-                        "Crear Cuenta",
+                        "Crear nueva cuenta",
                         style: TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.w700,
@@ -76,7 +76,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       controller: emailController,
                       validator: AuthValidator.isEmailValid,
                       decoration: InputDecoration(
-                        hintText: "Email address",
+                        hintText: "Direcci´ón de correo electrónico",
                         hintStyle: TextStyle(color: Colors.white), // Color del texto de sugerencia
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey), // Color de la línea
@@ -92,7 +92,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       controller: nameController,
                       validator: AuthValidator.isNameValid,
                       decoration: InputDecoration(
-                        hintText: "User name",
+                        hintText: "Nombre de usuario",
                         hintStyle: TextStyle(color: Colors.white), // Color del texto de sugerencia
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey), // Color de la línea
@@ -109,7 +109,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       obscureText: passwordSee,
                       validator: AuthValidator.isPasswordValid,
                       decoration: InputDecoration(
-                        hintText: "Create password",
+                        hintText: "Crear contraseña",
                         hintStyle: TextStyle(color: Colors.white), // Color del texto de sugerencia
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey), // Color de la línea
@@ -138,7 +138,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       obscureText: passwordSee2,
                       validator: AuthValidator.isPasswordValid,
                       decoration: InputDecoration(
-                        hintText: "Confirm password",
+                        hintText: "Confirmar contraseña",
                         hintStyle: TextStyle(color: Colors.white), // Color del texto de sugerencia
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey), // Color de la línea
