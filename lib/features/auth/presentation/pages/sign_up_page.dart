@@ -76,7 +76,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       controller: emailController,
                       validator: AuthValidator.isEmailValid,
                       decoration: InputDecoration(
-                        hintText: "Direcci´ón de correo electrónico",
+                        hintText: "Dirección de correo electrónico",
                         hintStyle: TextStyle(color: Colors.white), // Color del texto de sugerencia
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey), // Color de la línea

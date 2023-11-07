@@ -1,6 +1,8 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'Diabetes-ML.dart';
+import 'retrain_page.dart';
 
 ////////////////////
 import 'blog_row.dart';
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
-        title: 'Flutter application',
+        title: 'Aldo Flutter Application',
         theme: ThemeData(
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
@@ -69,6 +71,12 @@ class _MyHomePageState extends State<MyHomePage> {
       case 2:
         page = FavoritesPage();
         break;
+      case 3:
+        page = ModelPage();
+        break;
+      case 4:
+        page = RetrainPage();
+        break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
     }
@@ -91,6 +99,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   NavigationRailDestination(
                     icon: Icon(Icons.favorite),
                     label: Text('Favorites'),
+                  ),
+                   NavigationRailDestination(
+                    icon: Icon(Icons.analytics),
+                    label: Text('Diabetes prediction'),
+                  ),
+                   NavigationRailDestination(
+                    icon: Icon(Icons.autorenew),
+                    label: Text('Retrain model'),
                   ),
                 ],
                 selectedIndex: selectedIndex,
