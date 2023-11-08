@@ -40,7 +40,7 @@ class _RetrainState extends State<RetrainPage> {
     });
 
     // Asegúrate de almacenar y cargar tu token de GitHub de manera segura
-    final token = "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";
+    final token = "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";
 
     final headers = {
       'Authorization': 'Bearer $token',
